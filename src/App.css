@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header{
+   
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+}
+
+.header > nav{
+    background-color: rgba(10, 51, 141);
+    /* background-color: var(--blue); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 6px;
+    color: rgb(231, 220, 220);
+    /* width: 100%; */
+}
+
+.top-left{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.top-left > .hamburger-btn > button{
+    padding: 10px;
+    background-color: transparent;
+}
+.top-left > .logo{
+    margin-left: -10px;
+}
+.menu{
+    background-color: red;
+    width: 10px;
+}

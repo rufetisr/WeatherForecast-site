@@ -1,0 +1,67 @@
+.daily{
+    /* margin-top: 40px; */
+    /* background-color: rgb(74, 117, 209); */
+    background-color: var(--gray);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(100, 97, 97, 0.51);
+
+    display: flex;
+    flex-direction: column;
+    border: none;
+    outline: none;
+    text-align: center;
+    /* width: 305px; */
+    border-radius: 20px;
+    /* width: fit-content; */
+    width: 530px;          
+}
+
+
+div > h1{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.mid{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    justify-content: space-between;
+    width: 70px;
+}
+
+.mid > .rain{
+    width: 37px;
+    margin-right: 5px;
+    /* color: rgb(0, 51, 190); */
+    font-size: 16px;
+}
+
+.mid > .water{
+    width: 20px;
+    height: 20px;
+}
+.mid > img{
+    height: 60px;
+    width: 60px;
+}
+.mid > .temp{
+    font-size: 22px;
+}
+.li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    /* border: 1px solid white; */
+    border-bottom: 1px solid wheat;
+}
+
+.li > .day{
+    margin-right: 20px;
+    width: 76px;
+}
+
+.li > .desc{
+    width: 90px;
+}
