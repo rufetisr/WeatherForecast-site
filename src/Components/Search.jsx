@@ -41,7 +41,7 @@ const Search = () => {
         <div className='search'>
             <form onSubmit={getData}>
                 <input required name='city' type="text" placeholder='City' />
-                <button type='submit' ><img src="/src\assets\search.png" alt="" /></button>
+                <button type='submit' ><img src="./src\assets\search.png" alt="" /></button>
             </form>
         </div>
     );
