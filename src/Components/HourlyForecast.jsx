@@ -2,7 +2,8 @@ import React from 'react';
 import { useContext } from "react";
 import Context from '../Context/Context';
 import './HourlyForecast.css'
-
+import water from '../assets/water.png'
+import wind from '../assets/wind.webp'
 const HourlyForecast = () => {
 
   let { setDaily, daily, weather, color } = useContext(Context)
@@ -43,11 +44,11 @@ const HourlyForecast = () => {
                       <p className='temp'>{Math.round(item.main.temp)}°</p>
                     </div>
                     <div  className='pop'>
-                      <img src="src\assets\water.png" alt="" className='water'/>
+                      <img src={water} alt="" className='water'/>
                       <p className='desc'>{`${Math.round(item.pop * 100)}%`}</p>
                     </div>
                     <div  className='pop sec2'>
-                      <img src="src\assets\wind.webp" alt="" className='water'/>
+                      <img src={wind} alt="" className='water'/>
                       <p className='desc'>{`${item.wind.speed} m/s`}</p>
                     </div>
                   </li>

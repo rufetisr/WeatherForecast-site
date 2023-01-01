@@ -1,15 +1,16 @@
+
 .home {
     display: grid;
     grid-template-rows: 1fr auto;
 }
+
 
 :root {
     --gray: rgba(211, 203, 203, 0.58);
 }
 
 .main {
-    /* background-image: url('/src\assets\nig1.jpg'); */
-    background-image: url('/src\assets\sky-with-white-clouds (1).jpg');
+    background-image: url('../assets/sky-with-white-clouds\ \(1\).jpg');
     background-repeat: no-repeat;
     /* width: 1700px; */
     /* background-color: red; */

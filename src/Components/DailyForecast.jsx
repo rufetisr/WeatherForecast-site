@@ -2,7 +2,7 @@ import React from 'react';
 import './DailyForecast.css'
 import { useContext } from 'react';
 import Context from '../Context/Context';
-
+import water from '../assets/water.png'
 const DailyForecast = () => {
 
   let { setDaily, daily, weather, color } = useContext(Context)
@@ -41,7 +41,7 @@ const DailyForecast = () => {
                   <li key={index} className='li'>
                     <p className='day'>{getDate(item.dt_txt)}</p>
                     <div className='mid'>
-                      <img src="src\assets\water.png" alt="" className='water'/>
+                      <img src={water} alt="" className='water'/>
                       <p className='rain'>{`${Math.round(item.pop*100)}%`}</p>
                       <img src={`http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`} alt="" />
                       <p className='temp'>{Math.round(item.main.temp)}°</p>
