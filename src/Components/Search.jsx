@@ -9,6 +9,7 @@ const Search = () => {
 
     let getData = async (e) => {
         e.preventDefault();
+        e.target.city.value = null;
 
         let result = await getDataFromApi(`${e.target.city.value}`);
         setWeather(result);
@@ -21,7 +22,7 @@ const Search = () => {
             console.log(data);
             setDaily(data);
         });
-
+        e.target.city = null;
         const key1 = '2f9270987154c3c51798342a0a80f322';
         // fetch(`https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${result.data.coord.lat}&lon=${result.data.coord.lon}&appid=${key1}`)
         // .then(res=>res.json())
