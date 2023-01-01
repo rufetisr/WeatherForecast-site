@@ -3,7 +3,7 @@ import './Search.css'
 import Context from '../Context/Context';
 import { getDataFromApi } from '../Services/Db';
 import axios from "axios";
-
+import search from '../assets/search.png'
 const Search = () => {
     let { setImg, weather, setWeather, setDaily, setHourly } = useContext(Context)
 
@@ -41,7 +41,7 @@ const Search = () => {
         <div className='search'>
             <form onSubmit={getData}>
                 <input required name='city' type="text" placeholder='City' />
-                <button type='submit' ><img src="/src\assets\search.png" alt="" /></button>
+                <button type='submit' ><img src={search} alt="" /></button>
             </form>
         </div>
     );
