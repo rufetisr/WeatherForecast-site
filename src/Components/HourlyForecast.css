@@ -60,6 +60,7 @@ hr{
 .hourly > .li{
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
     border: 1px solid wheat;
     width: 15vw;
 }
