@@ -2,6 +2,7 @@ import React from 'react'
 import Menubar from './Menubar'
 import { useContext } from "react";
 import Context from '../Context/Context';
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,11 +29,11 @@ const Header = () => {
     }
 
     return (
-        <header className='header'>
-            <nav>
-                <div className="top-left">
+        // <header className='header'>
+        //     <nav>
+                <div className='header'>
                     <Menubar />
-                    <div className="logo">
+                    {/* <div className="logo">
                         WeathterApp
                     </div>
                 </div>
@@ -43,10 +44,10 @@ const Header = () => {
                     <label class="switch" style={{display: 'flex'}}>
                         <p style={{marginRight: '10px'}}>Night</p>
                         <input type="checkbox" onChange={changeColor}/>
-                    </label>
+                    </label> */}
                 </div>
-            </nav>
-        </header>
+        //     </nav>
+        // </header>
     )
 }
 

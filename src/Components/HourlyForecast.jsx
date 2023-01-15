@@ -28,7 +28,7 @@ const HourlyForecast = () => {
   if (weather.data != undefined) {
 
     return (
-      <div >
+      <div className='hourly-container'>
         <h1>Hourly</h1>
         <hr></hr>
         <ul className={`hourly ${color}`}>

@@ -1,8 +1,21 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
+
+
+/* header > nav{
+    display: flex;
+}
+
+header > nav > .top-left{
+    display: flex;
+} */
+/*
 .header{
    
     position: sticky;
@@ -11,15 +24,15 @@
 }
 
 .header > nav{
-    background-color: rgba(10, 51, 141);
+    /* background-color: rgba(10, 51, 141); */
     /* background-color: var(--blue); */
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 6px;
-    color: rgb(231, 220, 220);
+    color: rgb(231, 220, 220); */
     /* width: 100%; */
-}
+/* }
 
 .top-left{
     display: flex;
@@ -31,10 +44,12 @@
     padding: 10px;
     background-color: transparent;
 }
+
 .top-left > .logo{
     margin-left: -10px;
 }
+
 .menu{
     background-color: red;
     width: 10px;
-}
+} */

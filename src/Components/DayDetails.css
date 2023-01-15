@@ -1,11 +1,18 @@
 
+.day-details{
+    width: 100%;
+}
+
+.day-details > h1{
+    margin-left: 10px;
+}
 .details{
     /* background-color: rgb(74, 117, 209); */
     background: var(--gray);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(100, 97, 97, 0.51);
-    width: 530px;
+    /* border: 1px solid rgba(100, 97, 97, 0.51); */
+    /* width: 530px; */
     box-sizing: border-box;
     padding: 10px;
     border-radius: 10px;
@@ -38,11 +45,14 @@
     background: rgba(211, 203, 203, 0.58);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(100, 97, 97, 0.51);
+    /* border: 1px solid rgba(100, 97, 97, 0.51); */
     margin-top: 20px;
+    margin-bottom: 10px;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
+    box-sizing: border-box;
+    /* width: 100%; */
 }
 
 .night{

@@ -29,7 +29,7 @@ const DailyForecast = () => {
   if (weather.data != undefined) {
 
     return (
-      <div >
+      <div className='daily-container'>
         <h1>Daily</h1>
         <hr></hr>
         <ul className={`daily ${color}`}>
