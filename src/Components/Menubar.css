@@ -79,13 +79,16 @@
     background-color: #0b1341;
     height: 80px;
     display: flex;
-    justify-content: start;
+    /* justify-content: start; */
     align-items: center;
+    justify-content: space-between;
     /* width: 1968px; */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .menu-bars{
-    margin-left: 2rem;
+    margin-left: 1.2rem;
     font-size: 2rem;
     background: none;
 }
@@ -112,7 +115,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 10px;
     list-style: none;
     height: 60px;
 }

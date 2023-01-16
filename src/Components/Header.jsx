@@ -31,22 +31,10 @@ const Header = () => {
     return (
         // <header className='header'>
         //     <nav>
-                <div className='header'>
-                    <Menubar />
-                    {/* <div className="logo">
-                        WeathterApp
-                    </div>
-                </div>
-                <div className="day" style={{ marginLeft: '5px' }}>
-                    {dateBuilder(new Date())}
-                </div>
-                <div className="theme">
-                    <label class="switch" style={{display: 'flex'}}>
-                        <p style={{marginRight: '10px'}}>Night</p>
-                        <input type="checkbox" onChange={changeColor}/>
-                    </label> */}
-                </div>
-        //     </nav>
+        <div className='header'>
+            <Menubar />            
+        </div>
+        
         // </header>
     )
 }
