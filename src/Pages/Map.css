@@ -1,0 +1,19 @@
+.map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.frame{
+    position: absolute;
+    clip: rect(64px, 900px, 393px, 5px );
+    max-width: 900px;
+    /* width: 90vh; */
+    height: 470px;
+    z-index: -1;
+}
+
+/* .weather-control-layers-new{
+    padding: 0px;
+} */

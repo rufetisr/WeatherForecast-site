@@ -12,7 +12,7 @@ export const getDataFromApi = async (city) => {
            alert('This city was not found!');
            return Promise.reject(error);
        }
-   );;
+   );
 
     return res;
 }

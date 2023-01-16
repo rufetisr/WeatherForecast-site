@@ -16,6 +16,11 @@ function App() {
   const [weather, setWeather] = useState({});
   const [daily, setDaily] = useState({});
   const [hourly, setHourly] = useState({});
+  const [city, setCity] = useState({
+    lat: '',
+    lon: '',
+    name: "",
+  });
   const [img, setImg] = useState("");
   const [color, setColor] = useState("white");
   const [inputValue, inputSetValue] = useState("");
@@ -31,7 +36,8 @@ function App() {
     weather,
     setWeather,
     inputValue,
-    inputSetValue
+    inputSetValue,
+    city, setCity,
   }
   return (
     <Context.Provider value={data}>
