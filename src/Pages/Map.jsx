@@ -2,25 +2,23 @@ import React from 'react';
 import { getDataFromApi } from '../Services/Db';
 import Context from '../Context/Context';
 import { useContext } from "react";
-// import { getDataFromApi } from '../Services/Db';
 import './Map.css'
+import key from '../Services/Apikey'
 
 const Map = () => {
-  let { city, setCity } = useContext(Context)
+  let { city, setCity, date, weather, color } = useContext(Context)
+  let mapUrl1 = `https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat=${city.lat}&lon=${city.lon}&zoom=9`;
 
-  // let result = await getDataFromApi(`${city}`);
-  // let lat = result.data.coord.lat;
-  // let lon = result.data.coord.lon;
-  let mapUrl = `https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat=${city.lat}&lon=${city.lon}&zoom=9`;
-  const getUrl = () => {
-    console.log(city.lat);
-    return mapUrl;
+  if (weather.data != undefined) {
+
+    return (
+      <div className={`map ${color}`}>
+          <h2>Temperature Map</h2>
+          <iframe frameBorder='0' scrolling='no' height='350px' width='100%' onScroll='none' src={mapUrl1} className='frame'></iframe>
+      </div>
+    );
   }
-  return (
-    <div className='map'>
-      <iframe frameBorder='0' scrolling='no' height='350px' width='100%' onScroll='none' src={mapUrl} className='frame'></iframe>
-    </div>
-  );
+
 }
 
 export default Map;

@@ -15,6 +15,7 @@ function App() {
   // const [count, setCount] = useState(0)
   const [weather, setWeather] = useState({});
   const [daily, setDaily] = useState({});
+  const [date, setDate] = useState("");
   const [hourly, setHourly] = useState({});
   const [city, setCity] = useState({
     lat: '',
@@ -38,6 +39,7 @@ function App() {
     inputValue,
     inputSetValue,
     city, setCity,
+    date, setDate,
   }
   return (
     <Context.Provider value={data}>

@@ -1,0 +1,6 @@
+.feed{
+    display: flex;
+    justify-content: center;
+    height: 87.2vh;
+    transition: 1000ms;
+}

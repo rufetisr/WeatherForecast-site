@@ -1,17 +1,27 @@
 .map {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+    flex-direction: column;
+    align-items: center; 
+    /* justify-content: center; */
+    height: 87.2vh;
+    transition: 1000ms;
+
+}
+
+.map > h2{
+    margin-top: 20px;
 }
 
 .frame{
     position: absolute;
-    clip: rect(64px, 900px, 393px, 5px );
+    clip: rect(64px, 900px, 399px, 5px );
     max-width: 900px;
     /* width: 90vh; */
-    height: 470px;
+    /* height: 470px; */
+    height: 448px;
     z-index: -1;
+    /* display: flex; */
+    /* justify-content: flex-end; */
 }
 
 /* .weather-control-layers-new{

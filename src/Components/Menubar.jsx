@@ -60,26 +60,30 @@ const Menubar = () => {
       <div className={menuClass}></div> */}
         <div className="navbar">
           {/* <Link to='/' className='menu-bars'> */}
-          <div style={{display: 'flex', alignItems: 'baseLine'}}>
+          <div style={{ display: 'flex', alignItems: 'baseLine' }}>
 
             <div className="menu-bars">
               <FaIcons.FaBars onClick={showSidebar} />
             </div>
-            <div className="logo" style={{marginLeft: '10px'}}>
+            <div className="logo" style={{ marginLeft: '10px' }}>
               <Link to='/' style={{ textDecoration: 'none', color: '#fff' }}>
                 <img src={logo} style={{ width: '40px', height: '40px' }} />
               </Link>
             </div>
           </div>
           {/* </div> */}
-          <div className="day" style={{ marginLeft: '10px', color: '#fff', width: 'fit-content' }}>
+          <div className="day" style={{ marginLeft: '10px', width: 'fit-content' }}>
             {dateBuilder(new Date())}
           </div>
           <div className="theme">
-            <label class="switch" style={{ display: 'flex', color: '#fff' }}>
+            <label class="switch">
+              <input type="checkbox" onChange={changeColor}/>
+              <span class="slider round"></span>
+            </label>
+            {/* <label class="switch" style={{ display: 'flex', color: '#fff' }}>
               <p style={{ marginRight: '10px' }}>Night</p>
               <input type="checkbox" onChange={changeColor} />
-            </label>
+            </label> */}
           </div>
           {/* </Link> */}
         </div>

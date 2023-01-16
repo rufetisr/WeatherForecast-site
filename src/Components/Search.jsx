@@ -5,7 +5,7 @@ import { getDataFromApi } from '../Services/Db';
 import axios from "axios";
 import search from '../assets/search.png'
 const Search = () => {
-    let { setImg, weather, setWeather, setDaily, setHourly,city, setCity } = useContext(Context)
+    let { setImg, weather, setWeather, setDaily, setHourly,city, setCity, setDate } = useContext(Context)
 
     let getData = async (e) => {
         e.preventDefault();
@@ -21,9 +21,10 @@ const Search = () => {
             lon: lonC,
             name: city,
         })
+        setDate(result.data.dt);
         // console.log(lat, lon);
         setImg(`http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`)
-        // console.log(result);
+        console.log(result);
 
         const key =  '2f9270987154c3c51798342a0a80f322';
         // let city = e.target.city.value;

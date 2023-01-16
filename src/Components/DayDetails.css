@@ -60,8 +60,12 @@
 }
 
 .night{
-    background-color: rgba(84, 86, 88,0.58);
+    background-color: rgba(62, 64, 66, 0.58);
     color: aliceblue;
+    transition: 1300ms;
+}
+.white{
+    transition: 1300ms;
 }
 .sun{
     width: 50px;
