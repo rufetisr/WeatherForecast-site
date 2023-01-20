@@ -56,7 +56,7 @@
     width: 100%;
     height: 70px;
     overflow: hidden;
-    /* border: none; */
+    border-radius: 10px;
     outline: none;
     padding: 5px;
     font-family: sans-serif;
@@ -89,6 +89,6 @@
 }
 
 .feed-section > form > .btn:hover{
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transition: transform 500ms; 
 }
