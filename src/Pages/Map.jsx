@@ -13,10 +13,17 @@ const Map = () => {
 
     return (
       <div className={`map ${color}`}>
-          <h2>Temperature Map</h2>
-          <iframe frameBorder='0' scrolling='no' height='350px' width='100%' onScroll='none' src={mapUrl1} className='frame'></iframe>
+        <h2>Temperature Map</h2>
+        <iframe frameBorder='0' scrolling='no' height='350px' width='100%' onScroll='none' src={mapUrl1} className='frame'></iframe>
       </div>
     );
+  }
+  else {
+    return (
+      <div className={color}>
+        <h2 className='mes'>Go to Home and search city</h2>
+      </div>
+    )
   }
 
 }

@@ -6,8 +6,8 @@
 }
 .search > form{
     display: flex;
-
 }
+
 .search > form > button{
     padding: 7px;
     border-radius: 8px;
