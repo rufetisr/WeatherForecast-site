@@ -34,3 +34,8 @@
 /* .weather-control-layers-new{
     padding: 0px;
 } */
+
+.mes a{
+    text-decoration: none;
+    color: #0b1341;
+}

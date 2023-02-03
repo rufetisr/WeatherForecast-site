@@ -2,6 +2,7 @@ import React from 'react';
 import { getDataFromApi } from '../Services/Db';
 import Context from '../Context/Context';
 import { useContext } from "react";
+import { Link } from 'react-router-dom';
 import './Map.css'
 import key from '../Services/Apikey'
 
@@ -21,7 +22,11 @@ const Map = () => {
   else {
     return (
       <div className={color}>
-        <h2 className='mes'>Go to Home and search city</h2>
+        <h2 className='mes'>
+          <Link to='/'>
+            Go to Home and search city
+          </Link>
+        </h2>
       </div>
     )
   }
