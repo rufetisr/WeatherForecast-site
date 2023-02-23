@@ -10,7 +10,7 @@ const WeatherCard = () => {
     //way1
     // let data = useContext(Context);
     //way2
-    let {img, weather,color } = useContext(Context)
+    let {img, weather, color } = useContext(Context)
 
     // console.log(data);
     // useEffect( () => {

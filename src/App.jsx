@@ -17,6 +17,7 @@ function App() {
   const [daily, setDaily] = useState({});
   const [date, setDate] = useState("");
   const [hourly, setHourly] = useState({});
+  const [cityArr, setCityArr] = useState([]);
   const [city, setCity] = useState({
     lat: '',
     lon: '',
@@ -32,6 +33,7 @@ function App() {
     hourly, setHourly,
     color, setColor,
     sidebar, setSidebar,
+    cityArr, setCityArr,
     img,
     setImg,
     weather,

@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import './Search.css'
 import Context from '../Context/Context';
 import { getDataFromApi } from '../Services/Db';
-import axios from "axios";
-import search from '../assets/search.png'
+import search from '../assets/search.png';
+
 const Search = () => {
-    let { setImg, weather, setWeather, setDaily, setHourly,city, setCity, setDate } = useContext(Context)
+    let { setImg, weather, setWeather, setDaily, setHourly, city, setCity, setDate, cityArr, setCityArr } = useContext(Context)
 
     let getData = async (e) => {
         e.preventDefault();
@@ -26,7 +26,7 @@ const Search = () => {
         setImg(`http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`)
         console.log(result);
 
-        const key =  '2f9270987154c3c51798342a0a80f322';
+        const key = '2f9270987154c3c51798342a0a80f322';
         // let city = e.target.city.value;
         fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${key}`).then(res => res.json()).then(data => {
             console.log(data);
@@ -44,15 +44,22 @@ const Search = () => {
         //     setHourly(data);
         //     console.log(data);
         // });
-
-
     }
+    let clickSave = (e) => {
+        e.preventDefault();
+        if (!cityArr.includes(city.name)) {
+            setCityArr([...cityArr, city.name]);            
+        }
 
+        console.log(cityArr);
+    }
     return (
         <div className='search'>
+
+            {weather.data == undefined ? null : <button id='star' onClick={clickSave}>Save</button>}
             <form onSubmit={getData}>
                 <input required name='city' type="text" placeholder='City' />
-                <button type='submit' ><img src={search} alt="" /></button>
+                <button type='submit' ><img src={search} alt="Search" /></button>
             </form>
         </div>
     );

@@ -9,6 +9,9 @@ const Favourites = () => {
   return (
     <div className={`fav ${color}`}>
       <h1>Favourites</h1>
+      <ul>
+        
+      </ul>
     </div>
   );
 }

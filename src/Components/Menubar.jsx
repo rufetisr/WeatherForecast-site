@@ -11,9 +11,7 @@ import logo from '../assets/weather.png'
 
 const Menubar = () => {
   const { sidebar, setSidebar } = useContext(Context)
-  // const [btnClass, setClass] = useState('burger-bar unclick');
-  // const [menuClass, setMenuClass] = useState('menu hidden');
-  // const [isMenuClick, setIsMenuClick] = useState(false);
+
   let { color, setColor } = useContext(Context)
 
   let changeColor = () => {
@@ -52,12 +50,6 @@ const Menubar = () => {
     <div>
       <IconContext.Provider value={{ color: '#fff' }}>
 
-        {/* <div className='burger-menu' onClick={updateMenu}>
-        <div className={btnClass} ></div>
-        <div className={btnClass} ></div>
-        <div className={btnClass} ></div>
-        </div>
-      <div className={menuClass}></div> */}
         <div className="navbar">
           {/* <Link to='/' className='menu-bars'> */}
           <div style={{ display: 'flex', alignItems: 'baseLine' }}>
@@ -71,22 +63,17 @@ const Menubar = () => {
               </Link>
             </div>
           </div>
-          {/* </div> */}
           <div className="day" style={{ marginLeft: '10px', width: 'fit-content' }}>
             {dateBuilder(new Date())}
           </div>
           <div className="theme">
             <label class="switch">
-              <input type="checkbox" onChange={changeColor}/>
+              <input type="checkbox" onChange={changeColor} />
               <span class="slider round"></span>
             </label>
-            {/* <label class="switch" style={{ display: 'flex', color: '#fff' }}>
-              <p style={{ marginRight: '10px' }}>Night</p>
-              <input type="checkbox" onChange={changeColor} />
-            </label> */}
           </div>
-          {/* </Link> */}
         </div>
+
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
             <li className="navbar-toggle">

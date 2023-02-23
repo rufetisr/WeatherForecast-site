@@ -1,7 +1,9 @@
 .search{
+    display: flex;
+    align-items: center;
     justify-self: flex-start;
     margin-top: 50px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     /* box-sizing: border-box; */
 }
 .search > form{
@@ -10,6 +12,7 @@
 
 .search > form > button{
     padding: 7px;
+    cursor: pointer;
     border-radius: 8px;
     height: 33px;
     box-sizing: border-box;
@@ -31,4 +34,16 @@
     width: 20px;
     height: 20px;
     
+}
+
+#star{
+    color: black;
+    border-radius: 8px;
+    background-color: rgba(255, 254, 254, 0.58);
+    border: none;
+    padding: 7px;
+    height: 33px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    cursor: pointer;
 }
