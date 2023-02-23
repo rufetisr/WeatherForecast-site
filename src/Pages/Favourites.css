@@ -1,7 +1,14 @@
 .fav{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 92.2vh;
     transition: 1000ms;
 
+}
+
+#favlist{
+    padding: 0px;
+    list-style-type: none;
 }

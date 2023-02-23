@@ -50,7 +50,7 @@ const Search = () => {
         if (!cityArr.includes(city.name)) {
             setCityArr([...cityArr, city.name]);            
         }
-
+        
         console.log(cityArr);
     }
     return (

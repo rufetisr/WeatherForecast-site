@@ -4,13 +4,19 @@ import context from '../Context/Context';
 import { useContext } from "react";
 
 const Favourites = () => {
-  const { color } = useContext(context)
- 
+  const { color, cityArr } = useContext(context);
+
   return (
     <div className={`fav ${color}`}>
       <h1>Favourites</h1>
-      <ul>
-        
+      <ul id='favlist'>
+        {
+          cityArr.map((item, index) => {
+            return (
+              <li key={index}>{item}</li>
+            )
+          })
+        }
       </ul>
     </div>
   );
