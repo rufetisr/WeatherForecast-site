@@ -67,7 +67,7 @@ const Menubar = () => {
             {dateBuilder(new Date())}
           </div>
           <div className="theme">
-            <label class="switch">
+            <label class="switch">              
               <input type="checkbox" onChange={changeColor} />
               <span class="slider round"></span>
             </label>

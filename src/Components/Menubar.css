@@ -8,8 +8,10 @@
     display: inline-block;
     width: 75px;
     height: 34px;
+    color: #fff;
+    
   }
-  
+    
   .switch input { 
     opacity: 0;
     width: 0;
