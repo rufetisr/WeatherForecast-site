@@ -58,8 +58,8 @@ const Menubar = () => {
               <FaIcons.FaBars onClick={showSidebar} />
             </div>
             <div className="logo" style={{ marginLeft: '10px' }}>
-              <Link to='/' style={{ textDecoration: 'none', color: '#fff' }}>
-                <img src={logo} style={{ width: '40px', height: '40px' }} />
+              <Link to='/home' style={{ textDecoration: 'none', color: '#fff' }}>
+                <img src={logo} style={{ width: '40px', height: '40px' }} alt='logo'/>
               </Link>
             </div>
           </div>
