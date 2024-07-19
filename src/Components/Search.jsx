@@ -6,6 +6,7 @@ import search from '../assets/search.png';
 
 const Search = () => {
     let { setImg, weather, setWeather, setDaily, setHourly, city, setCity, setDate, cityArr, setCityArr } = useContext(Context)
+    const apiKey = import.meta.env.VITE_API_KEY
 
     let getData = async (e) => {
         e.preventDefault();
@@ -26,9 +27,9 @@ const Search = () => {
         setImg(`http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`)
         console.log(result);
 
-        const key = '2f9270987154c3c51798342a0a80f322';
+        // const key = '2f9270987154c3c51798342a0a80f322';
         // let city = e.target.city.value;
-        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${key}`).then(res => res.json()).then(data => {
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`).then(res => res.json()).then(data => {
             console.log(data);
             setDaily(data);
         });
@@ -48,9 +49,9 @@ const Search = () => {
     let clickSave = (e) => {
         e.preventDefault();
         if (!cityArr.includes(city.name)) {
-            setCityArr([...cityArr, city.name]);            
+            setCityArr([...cityArr, city.name]);
         }
-        
+
         console.log(cityArr);
     }
     return (

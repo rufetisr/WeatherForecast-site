@@ -4,7 +4,7 @@ import Context from '../Context/Context';
 import { useContext } from "react";
 import { Link } from 'react-router-dom';
 import './Map.css'
-import key from '../Services/Apikey'
+
 
 const Map = () => {
   let { city, setCity, date, weather, color } = useContext(Context)
