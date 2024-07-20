@@ -9,16 +9,23 @@ import Context from '../Context/Context';
 import { useContext } from "react";
 
 const Main = () => {
-    let { setDaily, daily, weather } = useContext(Context)
-
+    let { weather } = useContext(Context)
+    console.log('app/home/main');
 
     return (
         <main className='main' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around' }}>
             <Search />
-            <WeatherCard />
-            <DailyForecast />
-            <HourlyForecast />
-            <DayDetails />          
+            {
+                weather.data != undefined ?
+
+                    <>
+                        <WeatherCard />
+                        {/* <DailyForecast />
+                        <HourlyForecast />
+                        <DayDetails /> */}
+                    </> : null
+            }
+
         </main>
     )
 }

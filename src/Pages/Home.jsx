@@ -7,8 +7,8 @@ import Context from '../Context/Context';
 import { useContext } from "react";
 
 const Home = () => {
-  const {sidebar, setSidebar} = useContext(Context)
-
+    const { sidebar, setSidebar } = useContext(Context)
+    console.log('app/home');
     return (
         <div className='home'>
             {/* <Header /> */}

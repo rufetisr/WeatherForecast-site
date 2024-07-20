@@ -5,10 +5,14 @@ import { getDataFromApi } from '../Services/Db';
 import search from '../assets/search.png';
 
 const Search = () => {
-    let { setImg, weather, setWeather, setDaily, setHourly, city, setCity, setDate, cityArr, setCityArr } = useContext(Context)
+    console.log('app/home/main/search');
+    let { setImg, weather, setWeather, setDaily, city, setCity, setDate, cityArr, setCityArr } = useContext(Context)
+
     const apiKey = import.meta.env.VITE_API_KEY
 
     let getData = async (e) => {
+
+        console.log('getData');
         e.preventDefault();
         let city = e.target.city.value;
 
@@ -26,9 +30,10 @@ const Search = () => {
         // console.log(lat, lon);
         setImg(`http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`)
 
-
+        console.log('before fetch');
         fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`).then(res => res.json()).then(data => {
             console.log(data);
+            console.log('after fetch');
             setDaily(data);
         });
 
@@ -44,7 +49,10 @@ const Search = () => {
     return (
         <div className='search'>
 
-            {weather.data == undefined ? null : <button id='star' onClick={clickSave}>Save</button>}
+            {
+                weather.data == undefined
+                    ? null : <button id='star' onClick={clickSave}>Save</button>
+            }
             <form onSubmit={getData}>
                 <input required name='city' type="text" placeholder='City' />
                 <button type='submit' ><img src={search} alt="Search" /></button>

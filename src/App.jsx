@@ -12,7 +12,8 @@ import Header from './Components/Header'
 
 
 function App() {
-  // const [count, setCount] = useState(0)
+
+  console.log('app');
   const [weather, setWeather] = useState({});
   const [daily, setDaily] = useState({});
   const [date, setDate] = useState("");
@@ -46,13 +47,13 @@ function App() {
   return (
     <Context.Provider value={data}>
       <BrowserRouter>
-        <Header/>
+        <Header />
         <Routes>
-          <Route path='/' element={<Home/>} ></Route>
-          <Route path='/home' element={<Home/>} ></Route>
-          <Route path='/map' element={<Map/>} ></Route>
-          <Route path='/favourites' element={<Favourites/>} ></Route>
-          <Route path='/feedback' element={<Feedback/>} ></Route>
+          <Route path='/' element={<Home />} ></Route>
+          <Route path='/home' element={<Home />} ></Route>
+          <Route path='/map' element={<Map />} ></Route>
+          <Route path='/favourites' element={<Favourites />} ></Route>
+          <Route path='/feedback' element={<Feedback />} ></Route>
         </Routes>
       </BrowserRouter>
     </Context.Provider>
